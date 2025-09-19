@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 
+=======
+Hello 
+World
+Python
+>>>>>>> 0cde831 (First draft)
