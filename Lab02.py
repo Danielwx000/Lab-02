@@ -61,7 +61,7 @@ uniqueIps = set(ips)
 print("Unique IPs:")
 
 for ip in (uniqueIps):
-    print(uniqueIps)
+    print(uniqueIps)  
 
 
 
