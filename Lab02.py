@@ -1,48 +1,8 @@
-#Samples
-'''
-#Task 1
-with open('sample.txt', 'r') as f:
-    for line in f:
-        print(line)                 #prints txt file
-
-#Task 2
-with open('sample.txt', 'r') as f:  #with open is a function that reads in files
-    for line in f:
-            print(line.strip())     #the .strip function removes the line bespace between words
-
-#Task 3
-with open('output.txt', 'w') as f:
-    f.write("This is a new file.\n")
-    f.write("It has two lines.\n")
-
-#Task 4
-import re
-
-pattern = r"at"                    #prints the word cat if it matches
-text = "The cat sat on the mat."
-
-matches = re.findall(pattern, text)
-print(matches)
-
-#Task 5
-import re 
-pattern = r"[A-Za-z]+"
-text = "Order 123 was placed on 2023-05-01."
-print(re.findall(pattern, text))
-
-
-#Task 6
-import re 
-pattern = r"\d+\.\d+\.\d+\.\d+"
-text = "Failed login from 192.168.0.1  and 10.0.0.5 at 10:30"
-print(re.findall(pattern, text,))
-'''
-
-
-
-#Lab excersises
+#Name:      Daniel Vintila
+#Date:      19/9/25
+#ID:        C00307041
+#Lab:       02
 #Step1 - read in the auth file, print out only the ip addresses 
-
 import re 
 IpFound=[] 
 ips = []                                                #makes an empty list for the found ip addresses 
@@ -55,16 +15,16 @@ with open('auth.log', 'r') as f:                        #opens the file auth.log
             ips.append(ip)
 
 #Step 2 - print all the Ip's as a list
+uniqueIps = set(ips)                                    #setting the ips as a set 
+print("Unique IPs:")                                    #printing a line 
 
-#print(ips)
-uniqueIps = set(ips)
-print("Unique IPs:")
+for ip in (uniqueIps):                                  #for loop to traverse the set
+    FinalIp = (ip)                                      #assigning a variable to the set 
+    print(FinalIp)                
 
-for ip in (uniqueIps):
-    print(uniqueIps)  
-
-
-
+with open('Unique_Ip.txt', 'w') as f:                   #creating a file called unique_ip and givign write permissions
+    for ip in uniqueIps:                                #traversing through list 
+        f.write(ip + '\n')                              #prints the list on a new line each time
 
 
 

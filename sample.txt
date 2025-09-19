@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
-Hello 
-World
-Python
->>>>>>> 0cde831 (First draft)
+1 Hello 
+2 World
+3 Python
